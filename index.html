@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>💖</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      background-color: #f5f1e8;
+      color: #3b2f2f;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 20px 10px;
+    }
+
+    header h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .album-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      height: 450px;
+      margin: 30px auto;
+      width: 90%;
+      max-width: 400px;
+      perspective: 1000px;
+    }
+
+    .photo-card {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      transition: transform 0.6s ease, opacity 0.6s ease;
+      backface-visibility: hidden;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+      background-color: white;
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: 75%;
+      object-fit: cover;
+    }
+
+    .caption {
+      padding: 15px;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    .controls {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .controls button {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      background-color: #8b6a4f;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 0 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .controls button:hover {
+      background-color: #a38062;
+    }
+
+    /* Hide non-active photo cards */
+    .photo-card:not(.active) {
+      opacity: 0;
+      transform: scale(0.9);
+      pointer-events: none;
+    }
+
+    .photo-card.active {
+      opacity: 1;
+      transform: scale(1);
+      pointer-events: all;
+    }
+
+    /* Timeline */
+    .timeline {
+      margin: 40px auto 60px;
+      max-width: 600px;
+      padding: 0 20px;
+    }
+
+    .timeline h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .timeline ul {
+      list-style: none;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    .timeline li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+
+    /* Spotify */
+    .spotify {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 300px;
+      height: 80px;
+      border-radius: 12px;
+      border: none;
+    }
+
+    @media (max-width: 600px) {
+      .photo-card {
+        height: 400px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1> My Pookieeeee 💕</h1>
+    <p>A little something for you, Praxedes</p>
+  </header>
+
+  <div class="album-container">
+    <!-- Photo placeholders -->
+    <div class="photo-card active">
+      <img src="Imani1.png" alt="Photo 1">
+      <div class="caption">This right here? This is the girl I prayed for😍</div>
+    </div>
+    <div class="photo-card">
+      <img src="Imani2.png" alt="Photo 2">
+      <div class="caption">Your smile is my favorite view 💫</div>
+    </div>
+    <div class="photo-card">
+      <img src="Imani3.png" alt="Photo 3">
+      <div class="caption">Honestly... breathtaking 🥹</div>
+    </div>
+    <div class="photo-card">
+        <img src="Imani4.png" alt="Photo 4">
+        <div class="caption">Just so Perfect🥹</div>
+      </div>
+      <div class="photo-card">
+        <img src="Imani5.png" alt="Photo 5">
+        <div class="caption">All I want in my life 😭</div>
+      </div>
+      <div class="photo-card">
+        <img src="Imani.png" alt="Photo 6">
+        <div class="caption">Stargirlllllllllllllllllllllll</div>
+      </div>
+      <div class="photo-card">
+        <img src="Imani15.png" alt="Photo 7">
+        <div class="caption">Every version of you is breathtaking — but this one? Wow</div>
+      </div>
+      <div class="photo-card">
+        <img src="Imani14.png" alt="Photo 8">
+        <div class="caption">You make beige look like gold, darling</div>
+      </div>
+      <div class="photo-card">
+        <img src="Imani13.png" alt="Photo 9">
+        <div class="caption">Eyes like galaxies, heart like home</div>
+      </div>
+      <div class="photo-card">
+        <img src="Imani12.png" alt="Photo 10">
+        <div class="caption">Beauty in motion — like poetry that walks</div>
+      </div>
+      <div class="photo-card">
+        <img src="Imani11.png" alt="Photo 11">
+        <div class="caption">Every little thing about you feels like art</div>
+      </div>
+      <div class="photo-card">
+        <img src="Imani10.png" alt="Photo 12">
+        <div class="caption">If softness had a face, it would be yours</div>
+      </div>
+      <div class="photo-card">
+        <img src="Imani9.png" alt="Photo 13">
+        <div class="caption">The glow isn’t just lighting — it’s you</div>
+      </div>
+      <div class="photo-card">
+        <img src="Imani8.png" alt="Photo 14">
+        <div class="caption">You turn ordinary days into fairytales</div>
+      </div>
+      <div class="photo-card">
+        <img src="Imani7.png" alt="Photo 15">
+        <div class="caption">Even the sky gets jealous of how you shine</div>
+      </div>
+      <div class="photo-card">
+        <img src="Imani6.png" alt="Photo 16">
+        <div class="caption">This photo? Stolen breath, stolen heart</div>
+      </div>
+      <div class="photo-card">
+        <img src="Imani16.png" alt="Photo 17">
+        <div class="caption">You wear confidence like a crown, my queen</div>
+      </div>
+      <div class="photo-card">
+        <img src="Imani17.png" alt="Photo 18">
+        <div class="caption">Sometimes I wonder if you’re real</div>
+      </div>
+      <div class="photo-card">
+        <img src="Imani19.png" alt="Photo 19">
+        <div class="caption">This is what love looks like to me. You</div>
+      </div>
+    
+  </div>
+
+  <div class="controls">
+    <button onclick="prevPhoto()">← Prev</button>
+    <button onclick="nextPhoto()">Next →</button>
+  </div>
+
+  <div class="timeline">
+    <h2>Our Story 🌸</h2>
+    <ul>
+      <li>💬 Feb: We met on Snapchat; 
+        I'm Sean btww; Hii,Sean btw ;
+        Heheee;
+        Thats what i remember 😭😭</li>
+      <li>🎶 Mar 3: Made our first Spotify playlist</li>
+      <li>💖 Mar 16: Said "I love you" for the first time</li>
+      <li>🌹 Mar 27: You became mine</li>
+      <li>Now I hope that the story continuesss❤️</li>
+    </ul>
+  </div>
+
+  <div class="spotify">
+    <h3>🎧 A song as beautiful as Praxedes</h3>
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4tReFKumS5bcFahdXDiM1b?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </div>
+
+  <script>
+    let currentIndex = 0;
+    const photos = document.querySelectorAll('.photo-card');
+
+    function showPhoto(index) {
+      photos.forEach((photo, i) => {
+        photo.classList.toggle('active', i === index);
+      });
+    }
+
+    function nextPhoto() {
+      currentIndex = (currentIndex + 1) % photos.length;
+      showPhoto(currentIndex);
+    }
+
+    function prevPhoto() {
+      currentIndex = (currentIndex - 1 + photos.length) % photos.length;
+      showPhoto(currentIndex);
+    }
+  </script>
+</body>
+</html>
